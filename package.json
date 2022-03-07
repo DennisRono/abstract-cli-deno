@@ -1,0 +1,27 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "deno": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "chalk-animation": "^1.6.0",
+    "commander": "^9.0.0",
+    "console-input": "^1.0.2",
+    "figlet": "^1.5.2",
+    "firequiz": "^0.0.5",
+    "inquirer": "^8.2.0",
+    "node-fetch": "^3.2.2",
+    "shelljs": "^0.8.5"
+  }
+}
