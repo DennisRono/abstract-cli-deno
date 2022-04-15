@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^5.0.0",
+    "chalk": "^5.0.1",
     "chalk-animation": "^1.6.0",
     "commander": "^9.0.0",
     "console-input": "^1.0.2",
