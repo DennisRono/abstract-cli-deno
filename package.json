@@ -21,7 +21,7 @@
     "figlet": "^1.5.2",
     "firequiz": "^0.0.5",
     "inquirer": "^8.2.0",
-    "node-fetch": "^3.2.2",
+    "node-fetch": "^3.2.10",
     "shelljs": "^0.8.5"
   }
 }
