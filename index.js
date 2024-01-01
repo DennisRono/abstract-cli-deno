@@ -1,20 +1,33 @@
 #!/usr/bin/env node
 
+/*
+  Author: Dennis Kibet 2022
+  Github: @DennisRono
+  Email: dennisrkibet@gmail.com | dennis@denniskibet.com
+  website: denniskibet.com
+*/
+
 import chalk from 'chalk';
 import shell from 'shelljs'
-import { input } from 'console-input'
 import figlet from 'figlet'
 import { createSpinner } from 'nanospinner'
 
 const log = console.log;
 const curdir = process.cwd()
 
-let repository = input('Enter Your Repo Name: ')
-log(`${chalk.green(repository)}`);
-if(repository === '.'){
-    repository = curdir
+const uchoices = process.argv.slice(2);
+if(uchoices.length === 0){
+    log(`${chalk.red('Please pass in the arguments...')}`);
+    process.exit(1);
 }
-let visi = input('Enter Your Repo Visibility public(+p) or private(-p): ')
+
+let repository = uchoices[0];
+if(repository === '.'){
+    repository = curdir.split("\\").slice(-1)[0]
+}
+log(`${chalk.green(repository)}`);
+
+let visi = uchoices[1]
 if(visi === '+p'){
     visi = "--public"
 } else {
@@ -44,7 +57,7 @@ if (shell.exec(git).code !== 0) {
     setTimeout(() => {
         inspinner.error()
     }, 1000)
-    process.exit(0);
+    process.exit(1);
 } else {
     setTimeout(() => {
         inspinner.success()
